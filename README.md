@@ -2,6 +2,11 @@
 
 You own DevOps Lab running on docker
 
+Create the external `devops` network before bringing up this compose
+```
+docker network create devops
+```
+
 To obtain the root password you should run:
 
 ```
