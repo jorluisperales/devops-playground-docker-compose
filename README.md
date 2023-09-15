@@ -20,16 +20,12 @@ docker exec -it gitlab gitlab-rake "gitlab:password:reset[root]"
 
 ```
 docker-compose up -d
-``
-or
-
 ```
-
+or
+```
 docker compose up -d
-
 ```
 
 **NOTE**: This docker-compose.yml includes the GitLab instance and a runner, once deployed, make sure to update and run gitlab-runner-register.sh to register the runner.
 
 **NOTE**: Change both hostname and external_url under the gitlab container to match the IP of the docker host.
-```
