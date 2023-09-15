@@ -1,6 +1,6 @@
 # Author
 # Jorluis Perales
-# Support on GitHub: # Support on GitHub: https://github.com/sponsors/heyValdemar
+# Project URL on GitHub: https://github.com/jorluisperales/devops-playground-docker-compose
 
 services:
   # GITLAB
@@ -15,7 +15,8 @@ services:
       - 4000:80
     networks:
       - devops
-
+      
+  # JENKINS
   jenkins:
     image: jenkins/jenkins:latest
     container_name: jenkins
@@ -26,7 +27,8 @@ services:
       - 50000:50000
     networks:
       - devops
-
+      
+  # NEXUS
   nexus:
     image: sonatype/nexus:latest
     container_name: nexus
@@ -37,6 +39,7 @@ services:
     networks:
       - devops
 
+  # SONARQUBE
   sonarqube:
     image: sonarqube:community
     hostname: sonarqube
